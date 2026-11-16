@@ -10,11 +10,12 @@
     .then(function (d) {
       meta.textContent = 'Informe del ' + f(d.generado) + ' · ' + d.total + (d.total === 1 ? ' producto pendiente' : ' productos pendientes');
       var tb = tabla.querySelector('tbody');
+      var cab = Array.prototype.map.call(tabla.querySelectorAll('thead th'), function (th) { return th.textContent; });
       d.productos.forEach(function (p) {
         var tr = document.createElement('tr');
         if (p.observacion) tr.className = 'alerta';
-        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-', p.asignacion || 'Sin asignar.'].forEach(function (v) {
-          var td = document.createElement('td'); td.textContent = v; if (v === '-') td.className = 'vacio'; tr.appendChild(td);
+        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-', p.asignacion || 'Sin asignar.'].forEach(function (v, i) {
+          var td = document.createElement('td'); td.textContent = v; td.setAttribute('data-label', cab[i]); if (v === '-') td.className = 'vacio'; tr.appendChild(td);
         });
         tb.appendChild(tr);
       });
@@ -29,7 +30,7 @@
   function aviso(m) { btn.classList.remove('cargando'); btn.innerHTML = ico; btn.disabled = false; toast.textContent = m; toast.classList.add('ver'); setTimeout(function () { toast.classList.remove('ver'); }, 2500); }
   function generar() {
     return new Promise(function (ok) { requestAnimationFrame(function () { requestAnimationFrame(function () { setTimeout(ok, 30); }); }); })
-      .then(function () { return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' }); })
+      .then(function () { return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff', windowWidth: 1000, onclone: function (d) { d.documentElement.classList.add('captura'); } }); })
       .then(function (c) { return new Promise(function (ok) { c.toBlob(ok, 'image/png'); }); });
   }
   function descargar(b) {

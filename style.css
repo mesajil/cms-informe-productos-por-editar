@@ -9,7 +9,7 @@ th { background: #1a7f37; color: #fff; font-weight: 600; }
 tbody tr:nth-child(even) { background: #fafbfc; }
 td:nth-child(1), td:nth-child(2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 td:nth-child(4) { white-space: nowrap; }
-@media (max-width: 600px) { th, td { padding: 8px; font-size: .9rem; } td:nth-child(4) { white-space: normal; } }tbody tr.alerta, tbody tr.alerta:nth-child(even) { background: #fff3b0; }
+tbody tr.alerta, tbody tr.alerta:nth-child(even) { background: #fff3b0; }
 td:nth-child(5) { color: #6b4e00; }
 tbody td.vacio { text-align: center !important; }
 @keyframes girar { to { transform: rotate(360deg); } }
@@ -22,3 +22,18 @@ td:nth-child(6) { white-space: nowrap; color: #57606a; }
 #toast { position: fixed; right: 20px; bottom: 88px; background: #1f2328; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: .9rem; opacity: 0; transform: translateY(6px); transition: opacity .2s, transform .2s; pointer-events: none; z-index: 10; }
 #toast.ver { opacity: 1; transform: none; }
 main { padding-bottom: 96px; }
+@media (max-width: 640px) {
+  html:not(.captura) main { padding: 16px 10px 96px; }
+  html:not(.captura) h1 { font-size: 1.25rem; }
+  html:not(.captura) table, html:not(.captura) tbody, html:not(.captura) tr, html:not(.captura) td { display: block; width: 100%; }
+  html:not(.captura) table { background: transparent; box-shadow: none; border-radius: 0; overflow: visible; }
+  html:not(.captura) thead { display: none; }
+  html:not(.captura) tbody tr { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.08); margin-bottom: 10px; overflow: hidden; }
+  html:not(.captura) tbody tr:nth-child(even) { background: #fff; }
+  html:not(.captura) tbody tr.alerta, html:not(.captura) tbody tr.alerta:nth-child(even) { background: #fff3b0; }
+  html:not(.captura) td { display: flex; gap: 12px; padding: 7px 12px; border-bottom: 1px solid #eaeef2; white-space: normal !important; font-size: .92rem; }
+  html:not(.captura) td:last-child { border-bottom: 0; }
+  html:not(.captura) td::before { content: attr(data-label); flex: 0 0 96px; font-weight: 600; color: #57606a; }
+  html:not(.captura) tbody td.vacio { text-align: left !important; }
+  html:not(.captura) td:nth-child(3) { font-weight: 600; }
+}
