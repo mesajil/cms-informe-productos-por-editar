@@ -28,7 +28,8 @@
   var txt = btn.textContent;
   function aviso(m) { btn.classList.remove('cargando'); btn.textContent = m; setTimeout(function () { btn.textContent = txt; btn.disabled = false; }, 2500); }
   function generar() {
-    return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' })
+    return new Promise(function (ok) { requestAnimationFrame(function () { requestAnimationFrame(function () { setTimeout(ok, 30); }); }); })
+      .then(function () { return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' }); })
       .then(function (c) { return new Promise(function (ok) { c.toBlob(ok, 'image/png'); }); });
   }
   function descargar(b) {
