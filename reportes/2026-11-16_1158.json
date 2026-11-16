@@ -1,0 +1,48 @@
+{
+    "generado":  "2026-11-16T11:58:46",
+    "total":  6,
+    "productos":  [
+                      {
+                          "n":  1,
+                          "codigo":  "043345",
+                          "producto":  "Obsequio - CAMARA PRINTER KIDS",
+                          "fecha":  "2026-11-16T11:57:00",
+                          "observacion":  "Producto tipo obsequio"
+                      },
+                      {
+                          "n":  2,
+                          "codigo":  "043343",
+                          "producto":  "TECLADO Gaming ASUS TUF K3 Gen II Hatsune Miku Ed.",
+                          "fecha":  "2026-11-16T08:10:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  3,
+                          "codigo":  "043344",
+                          "producto":  "MOUSE Gaming ASUS ROG Keris II Ace 42K",
+                          "fecha":  "2026-11-16T08:10:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  4,
+                          "codigo":  "043342",
+                          "producto":  "MONITOR 27 ASUS TUF VG27UQEL5A iPS 4K UHD 80Hz",
+                          "fecha":  "2026-11-16T08:10:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  5,
+                          "codigo":  "043340",
+                          "producto":  "MONITOR 27 SAMSUNG ViewFinity S7 H700 4K UHD",
+                          "fecha":  "2026-11-14T20:17:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  6,
+                          "codigo":  "043338",
+                          "producto":  "MONITOR 27 LG UltraFine 27UP850K-W 4K UHD",
+                          "fecha":  "2026-11-14T17:00:00",
+                          "observacion":  ""
+                      }
+                  ]
+}
