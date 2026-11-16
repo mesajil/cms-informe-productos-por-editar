@@ -25,8 +25,8 @@
 })();
 (function () {
   var btn = document.getElementById('copiar');
-  var txt = btn.textContent;
-  function aviso(m) { btn.classList.remove('cargando'); btn.textContent = m; setTimeout(function () { btn.textContent = txt; btn.disabled = false; }, 2500); }
+  var ico = btn.innerHTML; var toast = document.getElementById('toast');
+  function aviso(m) { btn.classList.remove('cargando'); btn.innerHTML = ico; btn.disabled = false; toast.textContent = m; toast.classList.add('ver'); setTimeout(function () { toast.classList.remove('ver'); }, 2500); }
   function generar() {
     return new Promise(function (ok) { requestAnimationFrame(function () { requestAnimationFrame(function () { setTimeout(ok, 30); }); }); })
       .then(function () { return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' }); })
@@ -37,7 +37,7 @@
     a.download = 'productos-por-editar.png'; a.click(); aviso('Imagen descargada');
   }
   btn.addEventListener('click', function () {
-    if (btn.disabled) return; btn.disabled = true; btn.classList.add('cargando'); btn.innerHTML = '<span class="spinner"></span>Generando…';
+    if (btn.disabled) return; btn.disabled = true; btn.classList.add('cargando'); btn.innerHTML = '<span class="spinner"></span>';
     var p = generar();
     if (navigator.clipboard && window.ClipboardItem) {
       navigator.clipboard.write([new ClipboardItem({ 'image/png': p })])
