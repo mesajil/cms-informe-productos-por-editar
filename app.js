@@ -13,7 +13,7 @@
       d.productos.forEach(function (p) {
         var tr = document.createElement('tr');
         if (p.observacion) tr.className = 'alerta';
-        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-'].forEach(function (v) {
+        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-', p.asignacion || 'Sin asignar.'].forEach(function (v) {
           var td = document.createElement('td'); td.textContent = v; if (v === '-') td.className = 'vacio'; tr.appendChild(td);
         });
         tb.appendChild(tr);
