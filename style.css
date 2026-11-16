@@ -12,3 +12,5 @@ td:nth-child(4) { white-space: nowrap; }
 @media (max-width: 600px) { th, td { padding: 8px; font-size: .9rem; } td:nth-child(4) { white-space: normal; } }tbody tr.alerta, tbody tr.alerta:nth-child(even) { background: #fff3b0; }
 td:nth-child(5) { color: #6b4e00; }
 tbody td.vacio { text-align: center !important; }
+#copiar { margin: 0 0 16px; padding: 8px 14px; border: 0; border-radius: 6px; background: #1a7f37; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+#copiar:disabled { opacity: .7; cursor: default; }

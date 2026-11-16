@@ -19,6 +19,36 @@
         tb.appendChild(tr);
       });
       tabla.hidden = false;
+      document.getElementById('copiar').hidden = false;
     })
     .catch(function () { meta.textContent = 'No se encontró el informe solicitado.'; });
+})();
+(function () {
+  var btn = document.getElementById('copiar');
+  var txt = btn.textContent;
+  function aviso(m) { btn.textContent = m; setTimeout(function () { btn.textContent = txt; btn.disabled = false; }, 2500); }
+  function generar() {
+    return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' })
+      .then(function (c) { return new Promise(function (ok) { c.toBlob(ok, 'image/png'); }); });
+  }
+  function descargar(b) {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(b);
+    a.download = 'productos-por-editar.png'; a.click(); aviso('Imagen descargada');
+  }
+  btn.addEventListener('click', function () {
+    btn.disabled = true; btn.textContent = 'Generando…';
+    var p = generar();
+    if (navigator.clipboard && window.ClipboardItem) {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': p })])
+        .then(function () { aviso('¡Copiada! Ya puedes pegarla'); })
+        .catch(function () {
+          p.then(function (b) {
+            var f = new File([b], 'productos-por-editar.png', { type: 'image/png' });
+            if (navigator.canShare && navigator.canShare({ files: [f] })) {
+              navigator.share({ files: [f] }).then(function () { aviso('Listo'); }, function () { descargar(b); });
+            } else { descargar(b); }
+          });
+        });
+    } else { p.then(descargar); }
+  });
 })();
