@@ -13,4 +13,7 @@ td:nth-child(4) { white-space: nowrap; }
 td:nth-child(5) { color: #6b4e00; }
 tbody td.vacio { text-align: center !important; }
 #copiar { margin: 0 0 16px; padding: 8px 14px; border: 0; border-radius: 6px; background: #1a7f37; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
-#copiar:disabled { opacity: .7; cursor: default; }
+#copiar:disabled { opacity: .7; cursor: not-allowed; }
+#copiar { display: inline-flex; align-items: center; gap: 8px; }
+#copiar .spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: girar .7s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }

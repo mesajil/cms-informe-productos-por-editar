@@ -26,7 +26,7 @@
 (function () {
   var btn = document.getElementById('copiar');
   var txt = btn.textContent;
-  function aviso(m) { btn.textContent = m; setTimeout(function () { btn.textContent = txt; btn.disabled = false; }, 2500); }
+  function aviso(m) { btn.classList.remove('cargando'); btn.textContent = m; setTimeout(function () { btn.textContent = txt; btn.disabled = false; }, 2500); }
   function generar() {
     return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff' })
       .then(function (c) { return new Promise(function (ok) { c.toBlob(ok, 'image/png'); }); });
@@ -36,7 +36,7 @@
     a.download = 'productos-por-editar.png'; a.click(); aviso('Imagen descargada');
   }
   btn.addEventListener('click', function () {
-    btn.disabled = true; btn.textContent = 'Generando…';
+    if (btn.disabled) return; btn.disabled = true; btn.classList.add('cargando'); btn.innerHTML = '<span class="spinner"></span>Generando…';
     var p = generar();
     if (navigator.clipboard && window.ClipboardItem) {
       navigator.clipboard.write([new ClipboardItem({ 'image/png': p })])
