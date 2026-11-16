@@ -12,7 +12,8 @@
       var tb = tabla.querySelector('tbody');
       d.productos.forEach(function (p) {
         var tr = document.createElement('tr');
-        [p.n, p.codigo, p.producto, f(p.fecha)].forEach(function (v) {
+        if (p.observacion) tr.className = 'alerta';
+        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || ''].forEach(function (v) {
           var td = document.createElement('td'); td.textContent = v; tr.appendChild(td);
         });
         tb.appendChild(tr);

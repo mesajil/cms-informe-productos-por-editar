@@ -9,4 +9,5 @@ th { background: #c8102e; color: #fff; font-weight: 600; }
 tbody tr:nth-child(even) { background: #fafbfc; }
 td:nth-child(1), td:nth-child(2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 td:nth-child(4) { white-space: nowrap; }
-@media (max-width: 600px) { th, td { padding: 8px; font-size: .9rem; } td:nth-child(4) { white-space: normal; } }
+@media (max-width: 600px) { th, td { padding: 8px; font-size: .9rem; } td:nth-child(4) { white-space: normal; } }tbody tr.alerta, tbody tr.alerta:nth-child(even) { background: #fff3b0; }
+td:nth-child(5) { color: #6b4e00; }
