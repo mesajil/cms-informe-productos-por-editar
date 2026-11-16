@@ -28,7 +28,7 @@
   var btn = document.getElementById('copiar');
   var ico = btn.innerHTML; var toast = document.getElementById('toast');
   function aviso(m) { btn.classList.remove('cargando'); btn.innerHTML = ico; btn.disabled = false; toast.textContent = m; toast.classList.add('ver'); setTimeout(function () { toast.classList.remove('ver'); }, 2500); }
-  function quitar() { document.documentElement.classList.remove('captura'); }
+  function quitar() { document.documentElement.classList.remove('sin-etiquetas'); }
   function generar() {
     return new Promise(function (ok) { requestAnimationFrame(function () { requestAnimationFrame(function () { setTimeout(ok, 30); }); }); })
       .then(function () { return html2canvas(document.getElementById('tabla'), { scale: 2, backgroundColor: '#ffffff', windowWidth: 1000, onclone: function (d) { d.documentElement.classList.add('captura'); Array.prototype.forEach.call(d.querySelectorAll('td[data-label]'), function (td) { td.removeAttribute('data-label'); }); } }); })
@@ -40,7 +40,7 @@
   }
   btn.addEventListener('click', function () {
     if (btn.disabled) return; btn.disabled = true; btn.classList.add('cargando'); btn.innerHTML = '<span class="spinner"></span>';
-    document.documentElement.classList.add('captura'); var p = generar(); p.then(quitar, quitar);
+    document.documentElement.classList.add('sin-etiquetas'); var p = generar(); p.then(quitar, quitar);
     if (navigator.clipboard && window.ClipboardItem) {
       navigator.clipboard.write([new ClipboardItem({ 'image/png': p })])
         .then(function () { aviso('¡Copiada! Ya puedes pegarla'); })

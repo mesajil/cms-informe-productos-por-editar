@@ -37,3 +37,4 @@ main { padding-bottom: 96px; }
   html:not(.captura) tbody td.vacio { text-align: left !important; }
   html:not(.captura) td:nth-child(3) { font-weight: 600; }
 }
+html.sin-etiquetas td::before { content: none !important; }
