@@ -38,3 +38,5 @@ main { padding-bottom: 96px; }
   html:not(.captura) td:nth-child(3) { font-weight: 600; }
 }
 html.sin-etiquetas td::before { content: none !important; }
+.persona { display: inline-block; padding: 2px 10px; border-radius: 999px; color: #fff; font-weight: 700; font-size: .85rem; line-height: 1.5; white-space: nowrap; align-self: center; }
+td.sin-asignar { color: #8c959f; }

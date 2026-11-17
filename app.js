@@ -5,17 +5,31 @@
   var url = id && /^[0-9_-]+$/.test(id) ? 'reportes/' + id + '.json' : 'reportes/ultimo.json';
   var fmt = new Intl.DateTimeFormat('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
   function f(s) { var d = new Date(s); return isNaN(d) ? s : fmt.format(d); }
+  var asig = fetch('asignaciones.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .catch(function () { return {}; });
   fetch(url, { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (d) {
+    .then(function (d) { return asig.then(function (a) { return [d, a || {}]; }); })
+    .then(function (x) {
+      var d = x[0], personas = x[1].personas || {}, codigos = x[1].codigos || {};
       meta.textContent = 'Informe del ' + f(d.generado) + ' · ' + d.total + (d.total === 1 ? ' producto pendiente' : ' productos pendientes');
       var tb = tabla.querySelector('tbody');
       var cab = Array.prototype.map.call(tabla.querySelectorAll('thead th'), function (th) { return th.textContent; });
       d.productos.forEach(function (p) {
         var tr = document.createElement('tr');
         if (p.observacion) tr.className = 'alerta';
-        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-', p.asignacion || 'Sin asignar.'].forEach(function (v, i) {
-          var td = document.createElement('td'); td.textContent = v; td.setAttribute('data-label', cab[i]); if (v === '-') td.className = 'vacio'; tr.appendChild(td);
+        var quien = p.asignacion || codigos[p.codigo] || 'Sin asignar.';
+        [p.n, p.codigo, p.producto, f(p.fecha), p.observacion || '-', quien].forEach(function (v, i) {
+          var td = document.createElement('td'); td.setAttribute('data-label', cab[i]);
+          if (i === 5 && Object.prototype.hasOwnProperty.call(personas, v)) {
+            var s = document.createElement('span'); s.className = 'persona'; s.textContent = v;
+            s.style.backgroundColor = (personas[v] && personas[v].color) || '#57606a';
+            td.appendChild(s);
+          } else {
+            td.textContent = v; if (v === '-') td.className = 'vacio'; if (i === 5) td.classList.add('sin-asignar');
+          }
+          tr.appendChild(td);
         });
         tb.appendChild(tr);
       });
@@ -23,6 +37,8 @@
       document.getElementById('copiar').hidden = false;
     })
     .catch(function () { meta.textContent = 'No se encontró el informe solicitado.'; });
+})();
+(function () { meta.textContent = 'No se encontró el informe solicitado.'; });
 })();
 (function () {
   var btn = document.getElementById('copiar');
