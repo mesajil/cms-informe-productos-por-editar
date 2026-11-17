@@ -1,19 +1,19 @@
 {
-    "generado":  "2026-11-16T17:05:14",
+    "generado":  "2026-11-17T07:53:50",
     "total":  2,
     "productos":  [
                       {
                           "n":  1,
-                          "codigo":  "043346",
-                          "producto":  "MONITOR 27 LG Gaming UltraGear 27G810A-B IPS 4K",
-                          "fecha":  "2026-11-16T17:00:00",
+                          "codigo":  "043347",
+                          "producto":  "MONITOR 24 LG Gaming UltraGear 24GS60F-B IPS FHD",
+                          "fecha":  "2026-11-17T07:41:00",
                           "observacion":  ""
                       },
                       {
                           "n":  2,
-                          "codigo":  "043342",
-                          "producto":  "MONITOR 27 ASUS TUF VG27UQEL5A iPS 4K UHD 80Hz",
-                          "fecha":  "2026-11-16T08:10:00",
+                          "codigo":  "043346",
+                          "producto":  "MONITOR 27 LG Gaming UltraGear 27G810A-B IPS 4K",
+                          "fecha":  "2026-11-16T17:00:00",
                           "observacion":  ""
                       }
                   ]
