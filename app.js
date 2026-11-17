@@ -38,8 +38,6 @@
     })
     .catch(function () { meta.textContent = 'No se encontró el informe solicitado.'; });
 })();
-(function () { meta.textContent = 'No se encontró el informe solicitado.'; });
-})();
 (function () {
   var btn = document.getElementById('copiar');
   var ico = btn.innerHTML; var toast = document.getElementById('toast');
