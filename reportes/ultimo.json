@@ -1,19 +1,26 @@
 {
-    "generado":  "2026-11-17T07:53:50",
-    "total":  2,
+    "generado":  "2026-11-19T12:05:34",
+    "total":  3,
     "productos":  [
                       {
                           "n":  1,
-                          "codigo":  "043347",
-                          "producto":  "MONITOR 24 LG Gaming UltraGear 24GS60F-B IPS FHD",
-                          "fecha":  "2026-11-17T07:41:00",
+                          "codigo":  "043360",
+                          "producto":  "UNIDAD SSD M.2 PCIe 500GB SANDISK Optimus GX 7100",
+                          "fecha":  "2026-11-19T12:01:00",
                           "observacion":  ""
                       },
                       {
                           "n":  2,
-                          "codigo":  "043346",
-                          "producto":  "MONITOR 27 LG Gaming UltraGear 27G810A-B IPS 4K",
-                          "fecha":  "2026-11-16T17:00:00",
+                          "codigo":  "043361",
+                          "producto":  "Obsequio - LLAVERO + BOLSA",
+                          "fecha":  "2026-11-19T12:01:00",
+                          "observacion":  "Producto tipo obsequio"
+                      },
+                      {
+                          "n":  3,
+                          "codigo":  "043359",
+                          "producto":  "UNIDAD SSD USB-C 1TB SANDISK DE10 BLACK",
+                          "fecha":  "2026-11-19T12:01:00",
                           "observacion":  ""
                       }
                   ]

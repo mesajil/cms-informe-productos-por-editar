@@ -1,0 +1,27 @@
+{
+    "generado":  "2026-11-19T12:05:34",
+    "total":  3,
+    "productos":  [
+                      {
+                          "n":  1,
+                          "codigo":  "043360",
+                          "producto":  "UNIDAD SSD M.2 PCIe 500GB SANDISK Optimus GX 7100",
+                          "fecha":  "2026-11-19T12:01:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  2,
+                          "codigo":  "043361",
+                          "producto":  "Obsequio - LLAVERO + BOLSA",
+                          "fecha":  "2026-11-19T12:01:00",
+                          "observacion":  "Producto tipo obsequio"
+                      },
+                      {
+                          "n":  3,
+                          "codigo":  "043359",
+                          "producto":  "UNIDAD SSD USB-C 1TB SANDISK DE10 BLACK",
+                          "fecha":  "2026-11-19T12:01:00",
+                          "observacion":  ""
+                      }
+                  ]
+}
