@@ -1,26 +1,33 @@
 {
-    "generado":  "2026-11-19T12:05:34",
-    "total":  3,
+    "generado":  "2026-11-20T12:08:29",
+    "total":  4,
     "productos":  [
                       {
                           "n":  1,
-                          "codigo":  "043360",
-                          "producto":  "UNIDAD SSD M.2 PCIe 500GB SANDISK Optimus GX 7100",
-                          "fecha":  "2026-11-19T12:01:00",
-                          "observacion":  ""
-                      },
-                      {
-                          "n":  2,
-                          "codigo":  "043361",
-                          "producto":  "Obsequio - LLAVERO + BOLSA",
-                          "fecha":  "2026-11-19T12:01:00",
+                          "codigo":  "043366",
+                          "producto":  "Obsequio - Parlante navideño BT TEROS TE-6018R",
+                          "fecha":  "2026-11-20T12:03:00",
                           "observacion":  "Producto tipo obsequio"
                       },
                       {
+                          "n":  2,
+                          "codigo":  "043364",
+                          "producto":  "MONITOR 27 GIGABYTE G27Q26 iPS 2K QHD OC 275Hz",
+                          "fecha":  "2026-11-20T12:03:00",
+                          "observacion":  ""
+                      },
+                      {
                           "n":  3,
-                          "codigo":  "043359",
-                          "producto":  "UNIDAD SSD USB-C 1TB SANDISK DE10 BLACK",
-                          "fecha":  "2026-11-19T12:01:00",
+                          "codigo":  "043365",
+                          "producto":  "LAPTOP Ryzen IA 7 350 GIGABYTE AERO X16 a Copilot+",
+                          "fecha":  "2026-11-20T12:03:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  4,
+                          "codigo":  "043362",
+                          "producto":  "CABLE DP a HDMI 3 m KUMO 4K 30Hz",
+                          "fecha":  "2026-11-20T08:09:00",
                           "observacion":  ""
                       }
                   ]
