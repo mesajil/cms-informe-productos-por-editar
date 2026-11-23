@@ -1,0 +1,20 @@
+{
+    "generado":  "2026-11-23T16:14:30",
+    "total":  2,
+    "productos":  [
+                      {
+                          "n":  1,
+                          "codigo":  "043378",
+                          "producto":  "Cartucho de Tinta HP 62XL Tricolor 300pag",
+                          "fecha":  "2026-11-23T16:12:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  2,
+                          "codigo":  "043377",
+                          "producto":  "Cartucho de Tinta HP 62XL Black 300pag.",
+                          "fecha":  "2026-11-23T16:12:00",
+                          "observacion":  ""
+                      }
+                  ]
+}

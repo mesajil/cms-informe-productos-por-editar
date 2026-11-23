@@ -1,26 +1,19 @@
 {
-    "generado":  "2026-11-23T12:30:34",
-    "total":  3,
+    "generado":  "2026-11-23T16:14:30",
+    "total":  2,
     "productos":  [
                       {
                           "n":  1,
-                          "codigo":  "043376",
-                          "producto":  "Obsequio - PARLANTE TEROS VIBE TE-6049OR (60w) ORA",
-                          "fecha":  "2026-11-23T12:24:00",
-                          "observacion":  "Producto tipo obsequio"
-                      },
-                      {
-                          "n":  2,
-                          "codigo":  "043374",
-                          "producto":  "Papel Fotografico CANON GP-501 con Brillo 10x15cm",
-                          "fecha":  "2026-11-21T17:13:00",
+                          "codigo":  "043378",
+                          "producto":  "Cartucho de Tinta HP 62XL Tricolor 300pag",
+                          "fecha":  "2026-11-23T16:12:00",
                           "observacion":  ""
                       },
                       {
-                          "n":  3,
-                          "codigo":  "043369",
-                          "producto":  "IMPRESORA CODIGO BARRAS ZEBRA ZD421 USB|LAN",
-                          "fecha":  "2026-11-21T12:00:00",
+                          "n":  2,
+                          "codigo":  "043377",
+                          "producto":  "Cartucho de Tinta HP 62XL Black 300pag.",
+                          "fecha":  "2026-11-23T16:12:00",
                           "observacion":  ""
                       }
                   ]
