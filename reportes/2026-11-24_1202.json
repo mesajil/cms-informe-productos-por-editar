@@ -1,0 +1,41 @@
+{
+    "generado":  "2026-11-24T12:02:01",
+    "total":  5,
+    "productos":  [
+                      {
+                          "n":  1,
+                          "codigo":  "043384",
+                          "producto":  "PC Core 7 240H LENOVO ThinkCentre Neo 50q Gen 5",
+                          "fecha":  "2026-11-24T12:00:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  2,
+                          "codigo":  "043383",
+                          "producto":  "Cartucho de Toner BROTHER TN615Y Yellow 1800pag.",
+                          "fecha":  "2026-11-24T08:12:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  3,
+                          "codigo":  "043382",
+                          "producto":  "Cartucho de Toner BROTHER TN615M Magenta 1800pag.",
+                          "fecha":  "2026-11-24T08:12:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  4,
+                          "codigo":  "043381",
+                          "producto":  "Cartucho de Toner BROTHER TN615C Cyan 1800pag.",
+                          "fecha":  "2026-11-24T08:12:00",
+                          "observacion":  ""
+                      },
+                      {
+                          "n":  5,
+                          "codigo":  "043380",
+                          "producto":  "Cartucho de Toner BROTHER TN615BK Black 3000pag.",
+                          "fecha":  "2026-11-24T08:12:00",
+                          "observacion":  ""
+                      }
+                  ]
+}
